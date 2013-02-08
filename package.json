@@ -1,0 +1,13 @@
+{
+  "name": "smilenetworks-com-au",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node web.js"
+  },
+  "dependencies": {
+    "express": "3.0.6",
+    "jade": "*",
+    "less-middleware": "*"
+  }
+}

@@ -1,0 +1,60 @@
+!!! 5
+html(lang="en-au")
+	head
+		meta(charset="utf-8")
+		//- meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="Description", content="Online Publishing, Web Apps & Design")
+		meta(name="Keywords", content="Web apps, websites, web sites, online communities, community, CMS, content management system, smile, smile networks, e-learning, elearning, web design, design")
+		title Smile Networks
+		
+		link(rel="stylesheet", href="/css/site.css")
+		//- link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Amaranth:400,700")
+		
+		//if lt IE 9
+			script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+	body
+		.whitenoise: .wrapper
+			
+			.logo: img(src="/img/logo.png", alt="logo", width="627", height="554")
+			
+			#intro
+				img(src="/img/were-smile-networks.png", alt="we are smile networks", width="895", height="59")
+				img(src="/img/blurb.png", style="margin: 30px 0px 20px;", alt="blurb", width="895", height="100")
+			
+			block content
+			
+			hr.hr
+			
+			.footer
+				table: tr
+					td.findoutmore
+						.title Find out more
+						.content Find out more about what we do and our web platform for your community. Get in touch!
+					td
+						table: tr
+							td.padding
+								.title Email
+								.content: a(href="mailto:hello@smilenetworks.com.au") hello@smilenetworks.com.au
+							td.padding
+								.title Send
+								.content
+									| PO Box 48
+									br
+									| Annandale Sydney NSW 2038
+									br
+									| Australia
+				img(src="/img/smile.png", alt="smile", width="93", height="38").smile
+		
+		//- Google Analytics smilenetworks.com.au = UA-27368274-1
+		if process.env.NODE_ENV == 'production'
+			script
+				var _gaq = _gaq || [];
+				_gaq.push([ '_setAccount', 'UA-27368274-1' ]);
+				_gaq.push([ '_trackPageview' ]);
+				_gaq.push([ '_trackPageLoadTime' ]);
+				(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[ 0 ]; s.parentNode.insertBefore(ga, s);
+				})();
